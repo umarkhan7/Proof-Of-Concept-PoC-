@@ -1,0 +1,54 @@
+--Deploying 
+Request Type: POST
+URL:- http://localhost:8080/engine-rest/deployment/create
+Body choose: form data and enter key=upload Value=xxxx.bpmn
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--Creating Instance
+Request Type: POST  
+URL:- http://localhost:8080/engine-rest/process-definition/key/userProcess/start
+Body choose raw and JSON
+{}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--For project
+Request Type: POST   
+URL:- http://localhost:8080/user_json
+Body choose raw and JSON
+{
+
+	"username": "admin",
+	"password": "useradmin",
+	"rights": "true"
+}   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--Get All Task
+Request Type: GET
+URL:- http://localhost:8080/engine-rest/task
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--Get Task by ProcessId
+Request Type: GET
+URL:- http://localhost:8080/engine-rest/task?processDefinitionKey=userAuthorization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--Get Task By Id
+Request Type: GET
+URL:- http://localhost:8080/engine-rest/task/311c7b3a-b97e-11eb-b2ca-5ebaef771eaf
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--Claim
+Request Type: POSR
+URL:- http://localhost:8080/engine-rest/task/7fe7a6c5-ba50-11eb-9fff-5ebaef771eaf/claim
+Body choose raw and JSON
+{
+    "userId": "admin"
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--Claim
+Request Type: POSR
+URL:- 
+http://localhost:8080/engine-rest/task/7fe7a6c5-ba50-11eb-9fff-5ebaef771eaf/complete
+Body choose raw and JSON
+{
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+   
